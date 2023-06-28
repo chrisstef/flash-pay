@@ -9,7 +9,7 @@ export default function Navbar() {
         <Container maxW={"1440px"} py={4}>
             <Flex flexDirection={"row"} justifyContent={"space-between"} alignItems={"center"}>
                 <Link href={"/"}>
-                    <Text fontWeight={"black"}>FlashPay</Text>
+                    <Text fontWeight={"black"} fontSize={"xl"}>FlashPay</Text>
                 </Link>
                 {address && (
                     <Flex flexDirection={"row"}>
