@@ -42,7 +42,7 @@ export default function TransferButton({ tokenAddress, receiver, amount, message
             }}
             onSuccess={() => toast({
                 title: 'Transfer Successful',
-                description: "You have successfully transferred tokens!",
+                description: `You have successfully transferred ${amount} tokens!`,
                 status: 'success',
                 duration: 9000,
                 isClosable: true,
