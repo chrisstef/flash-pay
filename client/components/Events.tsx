@@ -24,7 +24,6 @@ export default function Events() {
             }
         }
     );
-    console.log(events);
 
     return (
         <Box mt={20} w={"50%"}>

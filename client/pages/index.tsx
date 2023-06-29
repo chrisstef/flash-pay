@@ -10,16 +10,16 @@ const Home: NextPage = () => {
         <Container maxW={"1440px"}>
             <Flex h={"75vh"} px={20} borderRadius={20} >
                 <Flex flexDirection={"row"}>
-                    <Flex flexDirection={"column"} justifyContent={"center"} w={"60%"}>
+                    <Flex flexDirection={"column"} justifyContent={"center"} w={"62%"}>
                         <Stack spacing={4}>
                             <Heading fontSize={"6xl"}>
-                                Send tokens to your friends and family with ease.
+                                Send tokens fast and secure.
                             </Heading>
                             <Text fontSize={"xl"}>
-                                Select from a selection of tokens to transfer. Write a message to go along with your token transfer. Connect your wallet to get started now!
+                                FlashPay is a cutting-edge mobile application that enables you to effortlessly perform blockchain-based token transfers with utmost speed, security, and transparency.
                             </Text>
                             <Link href={"/transfer"}>
-                                <Button w={"100%"}>Make a Transfer</Button>
+                                <Button w={"80%"} justifyContent={"center"}>Make a Transfer</Button>
                             </Link>
                         </Stack>
                     </Flex>
