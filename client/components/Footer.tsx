@@ -7,7 +7,7 @@ export default function Footer() {
             <Container maxW={"1440px"} py={8}>
                 <Flex flexDirection={"row"} justifyContent={"space-between"}>
                     <Text>@ 2023 FlashPay | All rights reserved.</Text>
-                    <Text><Text fontWeight="bold" as="span">38</Text> transactions completed</Text>
+                    <Text><Text fontWeight="bold" as="span">38</Text>  recent transactions</Text>
                 </Flex>
             </Container>
         </Container>
