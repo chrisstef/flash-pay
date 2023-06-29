@@ -37,69 +37,65 @@ export default function TransferCard() {
         setSelectedToken(tokenAddress);
     };
 
-    console.log("Selected Token:", selectedToken)
-    console.log("Receiver:", formData.receiver);
-    console.log("Amount:", formData.amount);
-    console.log("Message:", formData.message);
-
-
     return (
-        <Card w={"50%"} p={16}>
+        <Box mt={10} w={"50%"}>
             <Heading>Transfer Tokens</Heading>
 
-            <Text mt={4} fontWeight={"bold"}>Select Token:</Text>
-            <Flex flexDirection={"row"} mt={4}>
-                {!isVerifiedTokensLoading &&
-                    verifiedTokens.map((token: string) => (
-                        <Box
-                            key={token}
-                            onClick={() => handleTokenSelection(token)}
-                        >
-                            <TokenSelection
-                                tokenAddress={token}
-                                isSelected={selectedToken === token}
-                            />
-                        </Box>
+            <Card p={8} my={4}>
 
-                    ))}
-            </Flex>
+                <Text fontWeight={"bold"}>Select Token:</Text>
+                <Flex flexDirection={"row"} mt={4}>
+                    {!isVerifiedTokensLoading &&
+                        verifiedTokens.map((token: string) => (
+                            <Box
+                                key={token}
+                                onClick={() => handleTokenSelection(token)}
+                            >
+                                <TokenSelection
+                                    tokenAddress={token}
+                                    isSelected={selectedToken === token}
+                                />
+                            </Box>
 
-            <TokenBalance tokenAddress={selectedToken} />
+                        ))}
+                </Flex>
 
-            <Text mt={2} mb={1} fontWeight={"bold"}>Send To:</Text>
-            <Input
-                placeholder="0x0000000"
-                type="text"
-                value={formData.receiver}
-                onChange={(event) => handleChange(event, "receiver")}
-            />
-            <Text mt={4} mb={1} fontWeight={"bold"}>Amount:</Text>
-            <Input
-                placeholder="0.0"
-                type="number"
-                value={formData.amount}
-                onChange={(event) => handleChange(event, "amount")}
-            />
-            <Text mt={4} mb={1} fontWeight={"bold"}>Message:</Text>
-            <Input
-                placeholder="Add short message here."
-                type="text"
-                value={formData.message}
-                onChange={(event) => handleChange(event, "message")}
-            />
-            <Box mt={8}>
-                {address ? (
-                    <TransferButton
-                        tokenAddress={selectedToken}
-                        receiver={formData.receiver}
-                        amount={formData.amount.toString()}
-                        message={formData.message}
-                    />
-                ) : (
-                    <Text>Please connect your wallet to make a transfer.</Text>
-                )}
-            </Box>
+                <TokenBalance tokenAddress={selectedToken} />
 
-        </Card>
+                <Text mt={2} mb={1} fontWeight={"bold"}>Send To:</Text>
+                <Input
+                    placeholder="0x0000000"
+                    type="text"
+                    value={formData.receiver}
+                    onChange={(event) => handleChange(event, "receiver")}
+                />
+                <Text mt={4} mb={1} fontWeight={"bold"}>Amount:</Text>
+                <Input
+                    placeholder="0.0"
+                    type="number"
+                    value={formData.amount}
+                    onChange={(event) => handleChange(event, "amount")}
+                />
+                <Text mt={4} mb={1} fontWeight={"bold"}>Message:</Text>
+                <Input
+                    placeholder="Add short message here."
+                    type="text"
+                    value={formData.message}
+                    onChange={(event) => handleChange(event, "message")}
+                />
+                <Box mt={8}>
+                    {address ? (
+                        <TransferButton
+                            tokenAddress={selectedToken}
+                            receiver={formData.receiver}
+                            amount={formData.amount.toString()}
+                            message={formData.message}
+                        />
+                    ) : (
+                        <Text>Please connect your wallet to make a transfer.</Text>
+                    )}
+                </Box>
+            </Card>
+        </Box>
     );
 };

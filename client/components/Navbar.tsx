@@ -20,7 +20,7 @@ export default function Navbar() {
                             <Text mr={8}>Claim Tokens</Text>
                         </Link>
                         <Link href={`/profile/${address}`}>
-                            <Text>My Profile</Text>
+                            <Text>My Account</Text>
                         </Link>
                     </Flex>
                 )}
