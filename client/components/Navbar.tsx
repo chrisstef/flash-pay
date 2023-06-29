@@ -24,7 +24,7 @@ export default function Navbar() {
                         </Link>
                     </Flex>
                 )}
-                <ConnectWallet />
+                <ConnectWallet theme="light" />
             </Flex>
         </Container>
     )

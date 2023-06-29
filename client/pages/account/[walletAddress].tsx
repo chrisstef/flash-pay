@@ -2,6 +2,7 @@ import { Avatar, Container, Flex, Heading, SimpleGrid, Spinner, Text } from "@ch
 import { useAddress, useContract, useContractRead } from "@thirdweb-dev/react";
 import { TRANSFER_CONTRACT_ADDRESS } from "../../constants/addresses";
 import BalanceCard from "../../components/BalanceCard";
+import Events from "../../components/Events";
 
 export default function AccountPage() {
     const address = useAddress();
@@ -30,7 +31,7 @@ export default function AccountPage() {
                         <Avatar size={"2xl"} mb={4} />
                         <Text
                             fontSize={"sm"}
-                            border={"1px solid white"}
+                            border={"1px solid black"}
                             textAlign={"center"}
                             borderRadius={4}
                             p={2}
@@ -50,6 +51,8 @@ export default function AccountPage() {
                                 <Spinner />
                             )}
                         </SimpleGrid>
+                        <Events />
+
                     </Flex>
                 </Flex>
             ) : (
