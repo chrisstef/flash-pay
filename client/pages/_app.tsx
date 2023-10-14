@@ -11,7 +11,7 @@ const activeChain = "mumbai";
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
-        <ThirdwebProvider activeChain={activeChain}>
+        <ThirdwebProvider activeChain={activeChain} clientId={process.env.NEXT_PUBLIC_CLIENT_ID}>
             <ChakraProvider>
                 <Navbar />
                 <Component {...pageProps} />
